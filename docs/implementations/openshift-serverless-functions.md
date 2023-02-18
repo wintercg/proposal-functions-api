@@ -88,7 +88,7 @@ module.exports = { handle };
 
 ### Related Links
 
-https://github.com/wintercg/admin/issues/44#issuecomment-1387160922
+* https://github.com/wintercg/admin/issues/44#issuecomment-1387160922
 
-https://docs.openshift.com/container-platform/4.12/serverless/functions/serverless-functions-getting-started.html
+* https://docs.openshift.com/container-platform/4.12/serverless/functions/serverless-functions-getting-started.html
 

@@ -19,6 +19,6 @@ We're open to adding more fields to `Request` if they are standardised but would
 
 ### Related Links
 
-https://github.com/wintercg/admin/issues/44#issuecomment-1386751428
+* https://github.com/wintercg/admin/issues/44#issuecomment-1386751428
 
-https://docs.netlify.com/edge-functions/overview/
+* https://docs.netlify.com/edge-functions/overview/

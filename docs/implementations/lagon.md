@@ -12,7 +12,7 @@ Logging is the same (using `console.log` / `console.debug` / `console.warn` / `c
 
 ### Related Links
 
-https://github.com/wintercg/admin/issues/44#issuecomment-1386620726
+* https://github.com/wintercg/admin/issues/44#issuecomment-1386620726
 
-https://lagon.app/
+* https://lagon.app/
 

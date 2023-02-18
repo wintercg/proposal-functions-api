@@ -168,7 +168,7 @@ We could, but this poses some challenges to composability. In order for an appli
 
 ### Related Links
 
-https://github.com/wintercg/admin/issues/44#issuecomment-1386249383
-https://github.com/wintercg/admin/issues/44#issuecomment-1387268875
+* https://github.com/wintercg/admin/issues/44#issuecomment-1386249383
+* https://github.com/wintercg/admin/issues/44#issuecomment-1387268875
 
-https://developers.cloudflare.com/workers/
+* https://developers.cloudflare.com/workers/

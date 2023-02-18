@@ -24,6 +24,6 @@ https://docs.aws.amazon.com/lambda/latest/dg/nodejs-exceptions.html still return
 
 ### Related Links
 
-https://github.com/wintercg/admin/issues/44#issuecomment-1396204170
+* https://github.com/wintercg/admin/issues/44#issuecomment-1396204170
 
-https://aws.amazon.com/lambda/#:~:text=AWS%20Lambda%20is%20a%20serverless,pay%20for%20what%20you%20use.
+* https://aws.amazon.com/lambda/#:~:text=AWS%20Lambda%20is%20a%20serverless,pay%20for%20what%20you%20use.
