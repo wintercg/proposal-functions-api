@@ -1,6 +1,9 @@
-# Problem
+# JavaScript Serverless Functions Standardization
+
+## Problem
 Today every competing JavaScript functions API is different enough that we end up with lower developer productivity and vendor lock-in. Lower developer productivity because developers have to learn multiple ways to write the JavaScript function code and may have to write more complex code to avoid vendor lock-in. Organizations wanting to leverage multiple functions providers or move from one provider to another incur significant additional cost.
-# Goal
+
+## Goal
 Goal is to define a JavaScript functions API that avoids vendor lock-in and facilitates developer productivity while being general enough to allow different implementations and optimizations behind the scenes.
 
 Things we should try to standardize
@@ -18,7 +21,8 @@ Things we should not try to standardize
 * accessing platform specific APIs offered by the vendor platforms(ex: google apis)
 * output format/how you view logs
 * how you monitor functions
-# Scenarios
+
+## Scenarios
 
 Scenario 1: Writing a HelloWorld function in one vendors platform and moving to other vendors platforms
 Shouldn’t have to change the code
@@ -29,3 +33,23 @@ If code does not use vendor specific APIs you should not have to change the code
 If code uses vendor specific APIs, you may need to change the code if you also need to use a different vendor for those calls.
 Build steps and or configuration may have to change
 
+
+## Implementations
+
+* [AWS Lambda](./docs/implementations/aws.md)
+* [Cloudflare Workers](./docs/implementations/cloudflare.md)
+* [Lagon](./docs/implementations/lagon.md)
+* [Netlify Edge Functions](./docs/implementations/netlify.md)
+* [Openshift Serverless Functions](./docs/implementations/openshift-serverless-functions.md)
+* [Vercel Edge Functions](./docs/implementations/vercel.md)
+
+## Contributors
+
+* https://github.com/Ethan-Arrowood
+* https://github.com/jasnell
+* https://github.com/styfle
+* https://github.com/QuiiBz
+* https://github.com/ascorbic
+* https://github.com/lholmquist
+* https://github.com/kentonv
+* https://github.com/mhdawson
