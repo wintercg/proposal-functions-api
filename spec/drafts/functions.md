@@ -15,7 +15,9 @@ A vendor-neutral specification for defining the function signature for serveress
 
 ## Overview
 
-TODO
+Today every competing JavaScript functions API is different enough that we end up with lower developer productivity and vendor lock-in. Lower developer productivity because developers have to learn multiple ways to write the JavaScript function code and may have to write more complex code to avoid vendor lock-in. Organizations wanting to leverage multiple functions providers or move from one provider to another incur significant additional cost.
+
+The Goal is to define a JavaScript functions API that avoids vendor lock-in and facilitates developer productivity while being general enough to allow different implementations and optimizations behind the scenes.
 
 ### Out of Scope
 
