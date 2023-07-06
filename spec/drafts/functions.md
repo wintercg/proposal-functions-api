@@ -83,26 +83,60 @@ module.exports = {
 Functions are invoked with a context object as the first parameter. This object provides access to the incoming request information.  Function developers may access several properties including, but not limited to, the HTTP request method, any query strings sent with the request, the headers, the request body, a logger and a CloudEvent.
 
 const context = {
-  event: CloudEvent
-  log: Logger,
   request: {
     query: Object,
     body: Object,
     headers: Object,
     method: String
-  }
+  },
+  log: Logger,
+  event: CloudEvent
 };
 
 ### Required Context Object Attributes
 
 The following Attributes are REQUIRED to be present in all Context Objects:
 
-#### event
+#### request
 
-- Type: `CloudEvent`
-- Description:
+- Type: `Object`
+- Description: An object holds information about the incoming request
+
+#### request.query
+
+- Type: `Object`
+- Description: the query string deserialized as an object, if any
+- Constraints:
+  - For HTTP GET requests, a `request.query` SHOULD be available, if query string Attributes exist
+- Examples:
+  - `{ param1: value, param2: value }`
+
+#### request.body
+
+- Type: `Object`
+- Description: The request body if any
+- Constraints:
+  - The request body SHOULD NOT expose the underlying framework(express, fastify)
+  - For HTTP POST requests, a `request.body` SHOULD be available
+- Examples:
+  - TODO
+
+#### request.headers
+
+- Type: `Object`
+- Description: The HTTP request headers
 - Constraints:
 - Examples:
+  - `{ HEADER_1: value }`
+
+#### request.method
+
+- Type: `String`
+- Description: The HTTP request method
+- Constraints:
+- Examples:
+  - GET
+  - POST
 
 #### log
 
@@ -114,44 +148,24 @@ The following Attributes are REQUIRED to be present in all Context Objects:
   - console.log/console.error/etc...
   - an instance of a Pino logger
 
-#### request
+#### event
 
-- Type: `Object`
-- Description: An object holds information about the incoming request
+- Type: `CloudEvent`
+- Description: The event that triggered the function.
 - Constraints:
+  - If a CloudEvent is detected, then this attribute is REQUIRED
 - Examples:
-
-#### request.query
-
-- Type: `Object`
-- Description: the query string deserialized as an object, if any
-- Constraints:
-  - For HTTP GET requests, a `request.query` SHOULD be available, if query string Attributes exist
-- Examples:
-
-#### request.body
-
-- Type: `Object`
-- Description: The request body if any
-- Constraints:
-  - The request body SHOULD NOT expose the underlying framework(express, fastify)
-  - For HTTP POST requests, a `request.body` SHOULD be available
-- Examples:
-
-#### request.headers
-
-- Type: `Object`
-- Description: The HTTP request headers
-- Constraints:
-- Examples:
-
-#### request.method
-
-- Type: `String`
-- Description: The HTTP request method
-- Constraints:
-- Examples:
-
+  - A CloudEvent Serialized as JSON:
+  ```
+  {
+      "specversion" : "1.0",
+      "type" : "com.github.pull_request.opened",
+      "source" : "https://github.com/cloudevents/spec/pull",
+      "subject" : "123",
+      "id" : "A234-1234-1234"
+      ...
+  }
+  ```
 
 ### OPTIONAL Context Object Attributes
 
