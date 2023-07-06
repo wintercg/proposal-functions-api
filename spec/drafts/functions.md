@@ -41,19 +41,19 @@ interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 This specification defines the following terms:
 
-### Serverless Function
+#### Serverless Function
 
 A serverless function is a programmatic function written by a software developer for a single purpose. It's then hosted and maintained on infrastructure by cloud computing companies.
 
-### Function Developer
+#### Function Developer
 
 A function developer is someone who is creating a serverless function.
 
-### Context Object Model
+#### Context Object Model
 
 A context object model is a parameter of the function signature that exposes certain data and Attributes to the function developer.
 
-### CloudEvents
+#### CloudEvents
 
 CloudEvents is a specification for describing event data in common formats to provide interoperability across services, platforms and systems.
 
